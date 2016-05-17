@@ -5,7 +5,7 @@ using System.Threading;
 namespace SonarQubeAutomation
 {
     public class Driver
-    {//co to jest?
+    {
         public static IWebDriver Instance { get; set; }
 
         public static string BaseAdress

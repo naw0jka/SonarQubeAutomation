@@ -54,9 +54,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BaseForTests\BaseForUser.cs" />
+    <Compile Include="SmokeTests\GroupAccountsTests.cs" />
     <Compile Include="SmokeTests\LoginTests.cs" />
-    <Compile Include="Utilities\BaseForTests.cs" />
+    <Compile Include="BaseForTests\BaseForAdmin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmokeTests\NavigationTests.cs" />
+    <Compile Include="SmokeTests\UserAccountsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SonarQubeAutomation\SonarQubeAutomation.csproj">

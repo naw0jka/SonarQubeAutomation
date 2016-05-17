@@ -8,23 +8,23 @@ using OpenQA.Selenium;
 
 namespace SonarQubeAutomation
 {
-    public class AssertMainMenu
+    public class MainMenuAssertions
     {
-        public static void IfSelectedCategoryInMainMenu(string mainMenuCategory)
+        public static void CategoryInMainMenuSelected(string mainMenuCategory)
         {
             Assert.AreEqual(Driver.Instance.FindElement(By.LinkText(mainMenuCategory)).Text, mainMenuCategory, "Selected category in main menu fail.");
         }
 
-        public static void IfSelectedDropDownCategoryInMainMenu(string dropDownCategory)
+        public static void DropDownCategoryInMainMenuSelected(string dropDownCategory)
         {
             string dropDownCategoryPage;
-            if (dropDownCategory == "Manage Dashboards")
-                dropDownCategoryPage = "My Global Dashboards";
-            else if (dropDownCategory == "Compare Projects")
+            if (dropDownCategory == "Manage_Dashboards")
+                dropDownCategoryPage = "My_Global_Dashboards";
+            else if (dropDownCategory == "Compare_Projects")
                 dropDownCategoryPage = "Compare";
             else dropDownCategoryPage = dropDownCategory; 
 
-            Assert.AreEqual(Driver.Instance.FindElement(By.LinkText(dropDownCategory)).Text, dropDownCategoryPage, "Selected category in main menu fail.");
+            Assert.AreEqual(true, Driver.ElementIsPresent(By.XPath("//h1[contains(.," + dropDownCategoryPage + ")]")), "Selected category in main menu fail.");
         }
     }
 }

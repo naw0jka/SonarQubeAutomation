@@ -8,11 +8,11 @@ using OpenQA.Selenium;
 
 namespace SonarQubeAutomation
 {
-    public class AssertAdministrationPage
+    public class AdministrationPageAssertions
     {
-        public static void IfCaterotySelected(string page)
+        public static void CaterotySelected(string page)
         {
-            Assert.AreEqual(true, Driver.ElementIsPresent(By.XPath('//a[contains(.,'page')]')), "Logged in.");
+            Assert.AreEqual(true, Driver.ElementIsPresent(By.XPath("//a[contains(.,"+page+")]")));
             Driver.Close();
         }
     }

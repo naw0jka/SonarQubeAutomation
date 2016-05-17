@@ -12,6 +12,7 @@ namespace SonarQubeAutomation
 {
     public class LoginPage
     {
+        public static bool checkboxStartStatus;
         public static void GoTo()
         {
             Driver.Initialize();
@@ -29,20 +30,18 @@ namespace SonarQubeAutomation
         {
             return new LoginCommand(userName);
         }
+        public static void CheckIfCheckBoxSelected()
+        {
+            var rememberMeCheckBox = Driver.Instance.FindElement(By.Id("remember_me"));
+            checkboxStartStatus = rememberMeCheckBox.Selected;
+        }
 
-        //public static int RememberMeCheckBoxClick()
-        //{
-        //    var checkBox = 0;
-        //    var rememberMeCheckBox = Driver.Instance.FindElement(By.Id("remember_me"));
-        //    if (rememberMeCheckBox.GetCssValue == checked)
-        //        {
-        //        checkBox = 1;
-        //    }
-
-        //    rememberMeCheckBox.Click();
-        //    return checkBox;
-        //}
-
+        public static void RememberMeCheckBoxClick()
+        {
+            var rememberMeCheckBox = Driver.Instance.FindElement(By.XPath("//label[@for='remember_me']"));
+            rememberMeCheckBox.Click();
+        }
+        
         public static void CancelButonClick()
         {
             var cancelButton = Driver.Instance.FindElement(By.XPath("//a[@class='spacer-left']"));

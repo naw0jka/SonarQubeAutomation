@@ -1,12 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SonarQubeAutomation;
 
-namespace SonarQubeTest
+namespace SonarQubeTests
 {
-    public class BaseForTests
+    public class BaseForAdmin
     {
         [TestInitialize]
-
         public void Init()
         {
             LoginPage.GoTo();
@@ -14,7 +13,6 @@ namespace SonarQubeTest
         }
 
         [TestCleanup]
-
         public void CleanUp()
         {
             Driver.Close();

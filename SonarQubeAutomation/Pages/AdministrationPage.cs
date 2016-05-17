@@ -11,10 +11,9 @@ namespace SonarQubeAutomation
 {
     public class AdministrationPage
     {
-        public static void GoTo(string login, string password)
+        public static void GoTo()
         {
-            HomePage.GoTo(login,password);
-            MainMenu.Category("Administration");
+            MainMenu.GoToCategory("Administration");
         }
 
         public static void CategoryClick(string category)
@@ -22,6 +21,5 @@ namespace SonarQubeAutomation
             //category:Analysis Scope, C#, General, Java, JavaScript, Licenses, MSBuild SonarQube Runner, SCM, Security, Tchnical Dabt.
             Driver.Instance.FindElement(By.LinkText(category)).Click();
         }
-
     }
 }

@@ -54,26 +54,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Asserts\AssertMenuNavigation\AssertMainMenu.cs" />
-    <Compile Include="Asserts\AssertPages\AssertAdministrationPage.cs" />
-    <Compile Include="Asserts\AssertPages\AssertHomePage.cs" />
-    <Compile Include="Asserts\AssertPages\AssertLoginPage.cs" />
-    <Compile Include="Asserts\AssertPages\AssertSecurityPage.cs" />
-    <Compile Include="Asserts\AssertPages\SecurityPages\AssertGlobalPermissionsPage.cs" />
-    <Compile Include="Asserts\AssertPages\SecurityPages\AssertGroupsPage.cs" />
-    <Compile Include="Asserts\AssertPages\SecurityPages\AssertPermissionTemplatePage.cs" />
-    <Compile Include="Asserts\AssertPages\SecurityPages\AssertProjectPermissionsPage.cs" />
-    <Compile Include="Asserts\AssertPages\SecurityPages\AssertUsersPage.cs" />
+    <Compile Include="Assertions\MenuNavigationAssertions\MainMenuAssertions.cs" />
+    <Compile Include="Assertions\PagesAssertions\AdministrationPageAssertions.cs" />
+    <Compile Include="Assertions\PagesAssertions\HomePageAssertions.cs" />
+    <Compile Include="Assertions\PagesAssertions\LoginPageAssertions.cs" />
+    <Compile Include="Assertions\PagesAssertions\SecurityPages\GroupsPageAssertions.cs" />
+    <Compile Include="Assertions\PagesAssertions\SecurityPages\UsersPageAssertions.cs" />
     <Compile Include="Driver.cs" />
     <Compile Include="Pages\AdministrationPage.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="MenuNavigation\MainMenu.cs" />
-    <Compile Include="Pages\SecurityPages\GlobalPermissionsPage.cs" />
     <Compile Include="Pages\SecurityPages\GroupsPage.cs" />
-    <Compile Include="Pages\SecurityPages\PermissionTemplatesPage.cs" />
-    <Compile Include="Pages\SecurityPages\ProjectPermissionsPage.cs" />
-    <Compile Include="Pages\SecurityPage.cs" />
     <Compile Include="Pages\SecurityPages\UsersPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -15,7 +15,7 @@ namespace SonarQubeTests
             // Act
             LoginPage.LogIn("admin", "admin");
             // Asssert
-            AssertHomePage.IfLoggedInAs("Administrator");
+            HomePageAssertions.LoggedInAs("Administrator");
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@ namespace SonarQubeTests
             // Act
             LoginPage.LogIn("admin", "aaa");
             // Asssert
-            AssertLoginPage.IfInformationWrongDataToLoginShowUp("Authentication failed.");
+            LoginPageAssertions.LoginError("Authentication failed.");
         }
 
         [TestMethod]
@@ -37,7 +37,20 @@ namespace SonarQubeTests
             // Act
             LoginPage.CancelButonClick();
             // Asssert
-            AssertHomePage.IfNotLoggedIn();
+            HomePageAssertions.NotLoggedIn();
         }
+
+        [TestMethod]
+        public void Deselect_CheckBox()
+        {
+            // Arrange
+            LoginPage.GoTo();
+            LoginPage.CheckIfCheckBoxSelected();
+            // Act
+            LoginPage.RememberMeCheckBoxClick();
+            // Asssert
+            LoginPageAssertions.CheckBoxNotSelected();
+        }
+
     }
 }
