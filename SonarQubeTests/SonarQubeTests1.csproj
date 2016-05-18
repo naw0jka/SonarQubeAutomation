@@ -63,9 +63,9 @@
     <Compile Include="SmokeTests\UserAccountsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SonarQubeAutomation\SonarQubeAutomation.csproj">
+    <ProjectReference Include="..\SonarQubeAutomation\SonarQubeAutomation1.csproj">
       <Project>{5b7fc8e4-1f1d-424b-b3ca-df7be95e8d1d}</Project>
-      <Name>SonarQubeAutomation</Name>
+      <Name>SonarQubeAutomation1</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
